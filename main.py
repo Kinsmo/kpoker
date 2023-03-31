@@ -15,20 +15,22 @@ random.shuffle(Pokers)
 # "03 Your Poker"
 my_poker = popn(Pokers,2)
 
-# "04 Enemy Poker"
-n_enemy = st.number_input("Number of Players:", value = 5)
-
-enemy_pokers = [popn(Pokers,2) for i in range(n_enemy)]
-
-# "05 Public Poker"
-public_poker = 0
-
 # "06 Look Poker"
 with col2:
+    n_enemy = st.number_input("Number of Players:", value = 5)
     print_poker(my_poker)
     is_call = st.button("ALL IN")
     is_drop = st.button("DROP")
+    is_rerun = st.button("AGAIN")
+    
+if is_rerun:
+    st.experimental_rerun()
 
+# "04 Enemy Poker"
+enemy_pokers = [popn(Pokers,2) for i in range(n_enemy)]
+
+# "05 Public Poker"
+public_poker = None
 with col1:
     # "07 Start Playing"
     for i in [2,5,6,7]:
