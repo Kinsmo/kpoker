@@ -3,7 +3,7 @@ from kpoker import *
 from kinspy.print_functions import *
 import streamlit as st
 
-st.title("Kpoker")
+st.title("K-Poker")
 col1,col2 = st.columns(2)
 
 # "01 New Cards"
@@ -22,8 +22,6 @@ with col2:
     is_call = st.button("ALL IN")
     is_drop = st.button("DROP")
     is_rerun = st.button("AGAIN")
-    okk = st.text_input("okk")
-    if okk:st.write("okk")
     
 if is_rerun:
     st.experimental_rerun()
@@ -63,4 +61,4 @@ with col1:
         if is_call and i ==7:
             judge(my_poker,enemy_pokers,public_poker,all_in = True)
             
-st.write("END")
+st.write("By Yunxiao Zhang")
