@@ -305,7 +305,7 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
 
     if power1 >= power2:
         if all_in:
-            st.sucess("YOU WIN!!!")
+            st.success("YOU WIN!!!")
             st.balloons()
         else:
             st.warning("BAD DECISION!!!")
