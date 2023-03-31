@@ -298,24 +298,24 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
 
     if len(winners) >1: st.write("Many Enemy Winners!!!")
 
-    st.title(f":blue[**You Hit: {kind1}**]")
+    st.success(f":blue[**You Hit: {kind1}**]")
     print_poker(card1)
-    st.title(f":red[**Enemy Hit: {kind2}**]")
+    st.error(f":red[**Enemy Hit: {kind2}**]")
     print_poker(card2)
 
     if power1 >= power2:
         if all_in:
-            st.success("YOU WIN!!!")
+            st.title(":green[YOU WIN!!!]")
             st.balloons()
         else:
-            st.warning("BAD DECISION!!!")
+            st.title(":yellow[BAD DECISION!!!]")
             st.snow()
     if power1 < power2:
         if all_in:
-            st.error("YOU LOSE!!!")
+            st.title(":red[YOU LOSE!!!]")
             st.snow()
         else:
-            st.success("GOOD DECISION!!!")
+            st.title(":blue[GOOD DECISION!!!]")
             st.balloons()
 
 def print_poker_all(all_pokers):
