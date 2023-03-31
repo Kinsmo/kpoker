@@ -21,8 +21,6 @@ my_poker = popn(Pokers,2)
 with col2:
     n_enemy = st.number_input("Number of Players:", value = 5)
     print_poker(my_poker)
-    with st.spinner('Wait for decision...'):
-        time.sleep(10)
     is_call = st.button("ALL IN")
     is_drop = st.button("DROP")
     is_rerun = st.button("AGAIN")
