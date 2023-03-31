@@ -23,34 +23,34 @@ public_poker = 0
 
 # "06 Look Poker"
 print_poker(my_poker)
-yes = st.button("Continue!")
+is_call = st.button("Call!")
+is_drop = st.button("Drop!")
 
 # "07 Start Playing"
 for i in [2,5,6,7]:
-    if yes:
-        if answer == 'n' and i==2:
-            print_poker_all(enemy_pokers)
-            break
+    if is_drop and i==2:
+        print_poker_all(enemy_pokers)
+        break
 
-        if answer == 'n' and i in [5,6,7]:
-            judge(my_poker,enemy_pokers,public_poker)
-            break
+    if is_drop and i in [5,6,7]:
+        judge(my_poker,enemy_pokers,public_poker)
+        break
 
 #         "Flop"
-        if answer == 'y' and i ==2:
-            public_poker = popn(Pokers,3)
-            print_poker(public_poker)
+    if is_call and i ==2:
+        public_poker = popn(Pokers,3)
+        print_poker(public_poker)
 
 #         "Turn"
-        if answer == 'y' and i ==5:
-            public_poker.append(popn(Pokers,1))
-            print_poker(public_poker)
-        
+    if is_call and i ==5:
+        public_poker.append(popn(Pokers,1))
+        print_poker(public_poker)
+
 #         "River"
-        if answer == 'y' and i ==6:
-            public_poker.append(popn(Pokers,1))
-            print_poker(public_poker)
+    if is_call and i ==6:
+        public_poker.append(popn(Pokers,1))
+        print_poker(public_poker)
 
 #         "All In"
-        if answer == 'y' and i ==7:
-            judge(my_poker,enemy_pokers,public_poker,all_in = True)
+    if is_call and i ==7:
+        judge(my_poker,enemy_pokers,public_poker,all_in = True)
