@@ -246,10 +246,11 @@ def popn(Remain_Pokers,n):
 def hit_cards(cards7):
     comb_hand_cards = list(itertools.combinations(cards7, 5))
     powers = [check_hand_cards(hand_cards)[1] for hand_cards in comb_hand_cards]
+    kinds = [check_hand_cards(hand_cards)[1] for hand_cards in comb_hand_cards]
     power = max(powers)
-    kind = power // 10000
-    index = [i for i in range(len(powers)) if powers[i] == power][0]
+    index = [i for i,x in enumerate(powers) if x == power][0]
     card = comb_hand_cards[index]
+    kind = kinds[index]
     return kind, power, card
 
 def judge_two(my_poker,enemy_poker,public_poker):
