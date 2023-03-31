@@ -22,10 +22,11 @@ public_poker = 0
 
 "06 Look Poker"
 print_poker(my_poker)
+answer = st.text_input("Continue?","y")
 
 "07 Start Playing"
 for i in [2,5,6,7]:
-    answer = st.text_input("Continue?","y")
+    
     if st.button("Continue!!!"):
         if answer == 'n' and i==2:
             print_poker_all(enemy_pokers)
