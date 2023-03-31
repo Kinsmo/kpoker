@@ -305,14 +305,14 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
 
     if power1 >= power2:
         if all_in:
-            st.write("YOU WIN!!!")
+            st.sucess("YOU WIN!!!")
         else:
-            st.write("YOU CAN WIN!!!")
+            st.warning("YOU CAN WIN!!!")
     if power1 < power2:
         if all_in:
-            st.write("YOU LOSE!!!")
+            st.error("YOU LOSE!!!")
         else:
-            st.write("YOU are RIGHT!!!")
+            st.sucess("YOU ARE RIGHT!!!")
 
 def print_poker_all(all_pokers):
     for pokers in all_pokers:
