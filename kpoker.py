@@ -246,7 +246,7 @@ def popn(Remain_Pokers,n):
 def hit_cards(cards7):
     comb_hand_cards = list(itertools.combinations(cards7, 5))
     powers = [check_hand_cards(hand_cards)[1] for hand_cards in comb_hand_cards]
-    kinds = [check_hand_cards(hand_cards)[1] for hand_cards in comb_hand_cards]
+    kinds = [check_hand_cards(hand_cards)[0] for hand_cards in comb_hand_cards]
     power = max(powers)
     index = [i for i,x in enumerate(powers) if x == power][0]
     card = comb_hand_cards[index]
