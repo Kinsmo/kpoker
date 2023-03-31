@@ -1,6 +1,5 @@
 itertools
 random
-kinspy
 collections
 numpy
 streamlit
