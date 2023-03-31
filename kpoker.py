@@ -12,16 +12,10 @@ def make_poker():
 
 def print_poker(Pokers):
     value_map = {2:2,3:3,4:4,5:5,6:6,7:7,8:8,9:9,10:10,11:'J',12:'Q',13:'K',14:'A'}
-    suit_map = {1:'\u2660',2:'\033[1;31m\u2665\033[0m',3:'\u2663',4:'\033[1;31m\u2666\033[0m'}
+    suit_map = {1:'\u2660',2:'\u2665',3:'\u2663',4:'\u2666'}
     for poker in Pokers:
         st.write(f"{value_map[poker[0]]}{suit_map[poker[1]]} ",end='')
     st.write('')
-
-class colors:
-    Red="\033[1;31m"
-    Blue="\033[1;34m"
-    Green="\033[1;32m"
-    End="\033[0m"
 
 def is_flush(hand_cards):
     return all([poker[1] == hand_cards[0][1] for poker in hand_cards])
