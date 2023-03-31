@@ -23,8 +23,8 @@ public_poker = 0
 
 # "06 Look Poker"
 print_poker(my_poker)
-is_call = st.button("Call!")
-is_drop = st.button("Drop!")
+is_call = st.button("ALL-IN!")
+is_drop = st.button("DROP!")
 
 # "07 Start Playing"
 for i in [2,5,6,7]:
