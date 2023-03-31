@@ -27,7 +27,7 @@ answer = st.text_input("Continue?","y")
 "07 Start Playing"
 for i in [2,5,6,7]:
     
-    if st.button("Continue!!!"):
+    if st.button("Continue!!!",key=i):
         if answer == 'n' and i==2:
             print_poker_all(enemy_pokers)
             break
