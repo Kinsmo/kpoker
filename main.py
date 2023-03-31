@@ -22,6 +22,8 @@ with col2:
     is_call = st.button("ALL IN")
     is_drop = st.button("DROP")
     is_rerun = st.button("AGAIN")
+    okk = st.text_input("okk")
+    if okk:st.write("okk")
     
 if is_rerun:
     st.experimental_rerun()
