@@ -312,7 +312,7 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
         if all_in:
             st.error("YOU LOSE!!!")
         else:
-            st.sucess("YOU ARE RIGHT!!!")
+            st.success("YOU ARE RIGHT!!!")
 
 def print_poker_all(all_pokers):
     for pokers in all_pokers:
