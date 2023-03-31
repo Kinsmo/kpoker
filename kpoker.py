@@ -16,7 +16,7 @@ def print_poker(Pokers):
     s = ""
     for poker in Pokers:
         s+=f"{value_map[poker[0]]}{suit_map[poker[1]]} "
-    st.title(s)
+    st.title(f"{s}")
 
 def is_flush(hand_cards):
     return all([poker[1] == hand_cards[0][1] for poker in hand_cards])
