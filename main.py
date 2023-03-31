@@ -2,6 +2,7 @@ import random
 from kpoker import *
 from kinspy.print_functions import *
 import streamlit as st
+import time
 
 st.title("K-Poker")
 st.write("@Yunxiao Zhang")
