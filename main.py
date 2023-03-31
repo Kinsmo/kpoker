@@ -60,3 +60,5 @@ with col1:
     #         "All In"
         if is_call and i ==7:
             judge(my_poker,enemy_pokers,public_poker,all_in = True)
+            
+st.write("END")
