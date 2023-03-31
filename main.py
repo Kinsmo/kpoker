@@ -5,26 +5,27 @@ import streamlit as st
 
 st.title("Kpoker")
 
-"01 New Cards"
+# "01 New Cards"
 Pokers = make_poker()
 
-"02 Shuffle Cards"
+# "02 Shuffle Cards"
 random.shuffle(Pokers)
 
-"03 Your Poker"
+# "03 Your Poker"
 my_poker = popn(Pokers,2)
 
-"04 Enemy Poker"
+# "04 Enemy Poker"
 n_enemy = 5
 enemy_pokers = [popn(Pokers,2) for i in range(n_enemy)]
-"05 Public Poker"
+
+# "05 Public Poker"
 public_poker = 0
 
-"06 Look Poker"
+# "06 Look Poker"
 print_poker(my_poker)
 answer = st.text_input("Continue?","y")
 
-"07 Start Playing"
+# "07 Start Playing"
 for i in [2,5,6,7]:
     
     if st.button("Continue!!!",key=i):
@@ -36,21 +37,21 @@ for i in [2,5,6,7]:
             judge(my_poker,enemy_pokers,public_poker)
             break
 
-        "Flop"
+#         "Flop"
         if answer == 'y' and i ==2:
             public_poker = popn(Pokers,3)
             print_poker(public_poker)
 
-        "Turn"
+#         "Turn"
         if answer == 'y' and i ==5:
             public_poker.append(popn(Pokers,1))
             print_poker(public_poker)
         
-        "River"
+#         "River"
         if answer == 'y' and i ==6:
             public_poker.append(popn(Pokers,1))
             print_poker(public_poker)
 
-        "All In"
+#         "All In"
         if answer == 'y' and i ==7:
             judge(my_poker,enemy_pokers,public_poker,all_in = True)
