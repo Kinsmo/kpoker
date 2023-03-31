@@ -295,6 +295,7 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
     winners = [i for i,x in enumerate(power2s) if x == power2]
     enemy_winner = winners[0]
     card2 = card2s[enemy_winner]
+    kind2 = kind2s[enemy_winner]
     kind2 = kind_map[kind2]
 
     if len(winners) >1: st.write("Many Enemy Winners!!!")
