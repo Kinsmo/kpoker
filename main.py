@@ -4,6 +4,7 @@ from kinspy.print_functions import *
 import streamlit as st
 
 st.title("K-Poker")
+st.write("@Yunxiao Zhang")
 col1,col2 = st.columns(2)
 
 # "01 New Cards"
@@ -61,4 +62,3 @@ with col1:
         if is_call and i ==7:
             judge(my_poker,enemy_pokers,public_poker,all_in = True)
             
-st.write("By Yunxiao Zhang")
