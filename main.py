@@ -16,7 +16,7 @@ random.shuffle(Pokers)
 my_poker = popn(Pokers,2)
 
 # "04 Enemy Poker"
-n_enemy = st.number_input("Number of Players:",, value = 5)
+n_enemy = st.number_input("Number of Players:", value = 5)
 
 enemy_pokers = [popn(Pokers,2) for i in range(n_enemy)]
 
