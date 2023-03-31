@@ -1,4 +1,3 @@
-itertools
 random
 collections
 numpy
