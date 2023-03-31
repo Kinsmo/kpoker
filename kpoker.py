@@ -298,9 +298,9 @@ def judge(my_poker,enemy_pokers,public_poker,all_in = False):
 
     if len(winners) >1: st.write("Many Enemy Winners!!!")
 
-    st.write(f"Your Hit:{kind1}")
+    st.title(f":blue[**You Hit: {kind1}**]")
     print_poker(card1)
-    st.write(f"Enemy Hit:{kind2}")
+    st.title(f":red[**Enemy Hit: {kind2}**]")
     print_poker(card2)
 
     if power1 >= power2:
